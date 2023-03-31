@@ -28,23 +28,25 @@
     <report.version>3.4.2</report.version>
     <resources.version>3.3.0</resources.version>
     <site.version>4.0.0-M5</site.version>
+    <mariadb.version>LATEST</mariadb.version>
     <slf4j.version>LATEST</slf4j.version>
+    <hikari.version>5.0.0</hikari.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>org.mariadb.jdbc</groupId>
       <artifactId>mariadb-java-client</artifactId>
-      <version>LATEST</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
+      <version>${mariadb.version}</version>
     </dependency>
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-simple</artifactId>
         <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>${hikari.version}</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
