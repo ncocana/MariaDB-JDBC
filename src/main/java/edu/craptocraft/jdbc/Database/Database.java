@@ -30,7 +30,6 @@ public class Database {
                 statement.setString(1, name);
                 statement.setInt(2, rating);
                 rowsInserted = statement.executeUpdate();
-                statement.close();
             }
         }
         System.out.println("Rows inserted: " + rowsInserted);
@@ -63,7 +62,6 @@ public class Database {
                 statement.setInt(1, newRating);
                 statement.setString(2, name);
                 rowsUpdated = statement.executeUpdate();
-                statement.close();
             }
         }
         System.out.println("Rows updated: " + rowsUpdated);
@@ -77,7 +75,6 @@ public class Database {
                 statement.setString(1, name);
                 rowsDeleted = statement.executeUpdate();
                 System.out.println("Rows deleted: " + rowsDeleted);
-                statement.close();
             }
         }
     }
